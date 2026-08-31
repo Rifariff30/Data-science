@@ -1,13 +1,6 @@
-number=int(input("enter a number greater than 1"))
-if number < 2:
-    print("please enter a number greater than 1")
-else:
-    is_prime=True
-    for i in range(2,number):
-        if number%i==0:
-            is_prime=False
-            break
-    if is_prime:
-            print(f"{number} is a prime number")
-    else:
-            print(f"{number} is not a prime number")
+def count_words(text):
+    words=text.split()
+    return len (words)
+user_input=input("enter a sentence or paragraph")
+total_words=count_words(user_input)
+print(f"total words:{total_words}")
