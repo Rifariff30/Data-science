@@ -1,11 +1,16 @@
-number_list = [1,2,3,4,5,6,7,8,9,10]
-print(f"Original list: {number_list}")
+number = int(input("Enter a number greater than 1: "))
 
-sq_evens = []
+if number <2:
+    print("Please enter a number greater than 1.")
+else:
+    is_prime = True
 
-for num in number_list:
-    if num % 2 == 0:
-        sq_value = num ** 2
-        sq_evens.append(sq_value)
+    for i in range(2, number):
+        if number % i == 0:
+            is_prime = False
+            break
 
-print(f"Filtered and squared evens: {sq_evens}")
+    if is_prime:
+        print(f"{number} is a prime number")
+    else:
+        print(f"{number} is not a prime number")
